@@ -49,6 +49,6 @@ padrao="*CMIPF*e$ano$dia_anterior*"
 #--dry-run 
 
 # Move o arquivo para o diretório de destino
-rclone move $origem --include "*$padrao*" $destino --transfers=100 --dry-run --log-file=$DIR_LOG$ARQ_LOG -v ;
-rclone move $origem --include "*$padrao*" $destino --transfers=100 --log-file=$DIR_LOG$ARQ_LOG -v ;
+rclone move $origem --include "$padrao" $destino --transfers=100 --dry-run --log-file=$DIR_LOG$ARQ_LOG -v ;
+rclone move $origem --include "$padrao" $destino --transfers=100 --log-file=$DIR_LOG$ARQ_LOG -v ;
 #mv "$arquivo" "$destino/"
