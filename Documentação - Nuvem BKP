@@ -1,0 +1,32 @@
+Documentação: Script de Backup de Arquivos Flash para Nuvem
+
+Este documento apresenta a documentação para o script de backup de arquivos flash para a nuvem GOES-16. O objetivo deste script é copiar os arquivos flash do dia anterior de um diretório local para um 
+diretório na nuvem, permitindo o armazenamento seguro e o acesso fácil a esses arquivos.
+
+Visão Geral
+O script foi desenvolvido por Guilherme de Moura Oliveira (guimoura@unicamp.br) e tem como objetivo simplificar o processo de backup de arquivos flash para a nuvem GOES-16. Ele utiliza a 
+ferramenta rclone para realizar a cópia dos arquivos.
+
+Funcionamento
+
+O script é executado em um ambiente shell bash.
+Inicialmente, o nome do arquivo de log é gerado com base na data atual.
+O diretório de destino para os arquivos de log é definido.
+A data do dia anterior é obtida utilizando o comando date.
+O diretório de origem dos arquivos flash é configurado.
+O diretório de destino na nuvem GOES-16 é definido com base no ano, mês e dia anterior.
+O script imprime uma linha de separação e registra no arquivo de log o início da execução.
+Utilizando o comando rclone, os arquivos flash correspondentes ao ano, mês e dia anterior são copiados da origem para o destino na nuvem. É possível definir o número de transferências simultâneas e 
+um arquivo de log para acompanhar o processo.
+Após a conclusão da cópia, o script imprime uma linha de separação e registra no arquivo de log o término da execução.
+Instruções de Uso
+
+Certifique-se de que o script esteja localizado em um diretório acessível.
+Verifique se a ferramenta rclone está instalada e configurada corretamente.
+Modifique as configurações do script, como diretório de origem, diretório de destino e opções de transferência, se necessário.
+Execute o script utilizando o comando bash nome_do_script.sh.
+Verifique o arquivo de log para acompanhar o progresso e verificar se não ocorreram erros durante a cópia.
+Considerações Finais
+O script de backup de arquivos flash para a nuvem GOES-16 fornece uma solução automatizada e eficiente para a cópia segura de arquivos flash para um serviço de armazenamento em nuvem confiável. 
+Ele simplifica o processo e garante a proteção dos arquivos importantes. É altamente recomendado que este script seja configurado em um cronjob para executar automaticamente em intervalos regulares, 
+garantindo a atualização contínua do backup dos arquivos flash.
